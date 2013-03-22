@@ -1,0 +1,6 @@
+<!ELEMENT ClassReport (Student*)>
+<!ELEMENT Student (Question*)>
+<!ATTLIST Student sid CDATA #REQUIRED>
+<!ATTLIST Student total CDATA #REQUIRED>
+<!ELEMENT Question (#PCDATA)>
+<!ATTLIST Question qid CDATA #REQUIRED score CDATA #REQUIRED>

@@ -1,0 +1,6 @@
+<!ELEMENT Distribution (Question*)>
+<!ELEMENT Question (Answer+)>
+<!ATTLIST Question QID CDATA #REQUIRED>
+<!ELEMENT Answer EMPTY>
+<!ATTLIST Answer numcorrect CDATA #REQUIRED>
+<!ATTLIST Answer count CDATA #REQUIRED>

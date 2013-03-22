@@ -1,0 +1,14 @@
+<!--DTD File. Requirements:
+	- A renter has a name and ID
+	- A renter has zero or more phone numbers. Each phone number has a type, which is either "cell", "home", "work" or "other"
+	- A renter is renting zero or more properties, and the Id of each property they are renting is recorded
+	- A phone number consists of a country code, area code, and a local number.-->
+
+	<!DOCTYPE RENTER[
+		<!ELEMENT RENTER(PROPERTY*,PHONE*)>
+			<!ATTLIST RENTER name CDATA #REQUIRED, id ID #REQUIRED>
+		<!ELEMENT PROPERTY EMPTY>
+			<!ATTLIST PROPERTY id IDREF #REQUIRED>
+		<!ELEMENT PHONE EMPTY>
+			<!ATTLIST PHONE type cell|home|work|other #REQUIRED, country_code CDATA #REQUIRED, area_code CDATA #REQUIRED, local_num CDATA #REQUIRED>
+	]>

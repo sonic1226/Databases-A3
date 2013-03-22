@@ -1,0 +1,21 @@
+<!-- DTD File. Requirements:
+	- An owner is either an individUal or corporation. Regardless, the owner has a name, ID, and address
+	- An owner has at least one phone number. IF THE OWNER IS A CORPORATION, EACH PHONE NUMBER HAS A NAME AND A TITLE ASOCIATED WITH IT(FOR EXAMPLE, MARISSA MAYER, CEO).
+	- An address consists of an optional unit number, a street number, street name, city, province, countru and postal code
+	- A phone nubmer consists of a country code, area code, and a local number.-->
+
+<!DOCTYPE OWNER[
+	<!ELEMENT OWNER (INDIVIDUAL | CORPORATION)>
+	<!ELEMENT INDIVIDUAL(PHONE+, ADDRESS)>
+	<!ELEMENT CORPORATION(PHONEF+, ADDRESS)>
+		<!ATTLIST OWNER type individual|corporation #REQUIRED>
+		<!ATTLIST OWNER name CDATA #REQUIRED>
+		<!ATTLIST OWNER id ID #REQUIRED>
+	<!ELEMENT PHONEF PHONEID+>
+	<!ELEMENT PHONE EMPTY>
+		<!ATTLIST PHONE country_code CDATA #REQUIRED, area_code CDATA #REQUIRED, local_num CDATA #REQUIRED>
+	<!ELEMENT PHONEID PHONE>
+		<!ATTLIST PHONEID title CDATA #REQUIRED, name CDATA #REQUIRED, title CDATA #REQUIRED>
+	<!ELEMENT ADDRESS EMPTY>
+		<!ATTLIST ADDRESS unitNum CDATA #IMPLIED streetNum CDATA #REQUIRED, streetName CDATA #REQUIRED, city CDATA #REQUIRED, country CDATA #REQUIRED, postalCode CDATA #REQUIRED>
+]>

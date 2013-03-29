@@ -1,2 +1,39 @@
 <?xml version="1.0" standalone="no"?>
-<!DOCTYPE Properties SYSTEM "property.dtd">
+<!DOCTYPE PROPERTIES SYSTEM "property.dtd">
+<PROPERTIES>
+	<PROPERTY owner="O001" id="P001">
+		<ADDRESS streetNum="143" streetName="Spadina" city="Ottawa" country="Canada" postalCode="T6R3E3"/>
+		<SINGLE type="residencial">
+			<INFO rent="200" period="monthly" renter="R001">
+				<RESIDENCIAL numBedrooms="2" ac="yes" util_incl="no"/>
+			</INFO>
+		</SINGLE>
+	</PROPERTY>
+	<PROPERTY owner="O001" id="P002">
+		<ADDRESS streetNum="355" streetName="William St" city="Windsor" country="Canada" postalCode="H7J8I1"/>
+		<SINGLE type="residencial">
+			<INFO rent="400" period="monthly" renter="R001">
+				<RESIDENCIAL numBedrooms="2" ac="yes" util_incl="yes"/>
+			</INFO>
+		</SINGLE>
+	</PROPERTY>
+	<PROPERTY owner="O002" id="P003">
+		<ADDRESS streetNum="435" streetName="George" city="Windsor" country="Canada" postalCode="M3H2J1"/>
+		<MULTI type="residencial">
+			<INFO rent="5000" period="yearly" renter="R001" unitID="P3U001">
+				<RESIDENCIAL numBedrooms="1" ac="yes" util_incl="yes"/>
+			</INFO>
+			<INFO rent="7000" period="yearly" renter="R002" unitID="P3U002">
+				<RESIDENCIAL numBedrooms="1" ac="yes" util_incl="yes"/>
+			</INFO>
+		</MULTI>
+	</PROPERTY>
+	<PROPERTY owner="O003" id="P004">
+		<ADDRESS streetNum="435" streetName="Ontario" city="Toronto" country="Canada" postalCode="K0P3O3"/>
+		<MULTI type="commercial">
+			<INFO rent="700" period="monthly" renter="R001" unitID="P4U001"/>
+			<INFO rent="900" period="monthly" renter="R002" unitID="P4U002"/>
+		</MULTI>
+		<COMMERCIAL sqFeet="1000"/>
+	</PROPERTY>
+</PROPERTIES>

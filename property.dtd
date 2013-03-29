@@ -9,25 +9,25 @@
 		-> It is either currently rented or not. If it is rented, one renter ID is recorded
 	- An address consists of an optional unit number, a street number, street name, city, province, countru and postal code-->
 
-<!DOCTYPE PROPERTY[
-	<!ELEMENT PROPERTY (ADDRESS, (SINGLE, RESIDENCE) | (SINGLE, COMMERCIAL) | (MULTI, COMMERCIAL) | (MULTI, RESIDENCE))>
+	<!ELEMENT PROPERTIES (PROPERTY*)>
+	<!ELEMENT PROPERTY (ADDRESS, (SINGLE|MULTI) , COMMERCIAL*)>
 		<!ATTLIST PROPERTY owner IDREF #REQUIRED>
+		<!ATTLIST PROPERTY id ID #REQUIRED>
 
 	<!ELEMENT COMMERCIAL EMPTY>
 		<!ATTLIST COMMERCIAL sqFeet CDATA #REQUIRED>
 
 	<!ELEMENT RESIDENCIAL EMPTY>
-		<!ATTLIST RESIDENCIAL numBedrooms CDATA #REQUIRED, ac (yes|no) #REQUIRED, util_incl (yes|no) #REQUIRED>
+		<!ATTLIST RESIDENCIAL numBedrooms CDATA #REQUIRED ac (yes|no) #REQUIRED util_incl (yes|no) #REQUIRED>
 
 	<!ELEMENT SINGLE (INFO)>
-		<!ATTLIST SINGLE type commercial | residencial #REQUIRED>
+		<!ATTLIST SINGLE type (commercial|residencial) #REQUIRED>
 
 	<!ELEMENT MULTI (INFO, INFO+)>
-		<!ATTLIST MULTI type commercial | residencial #REQUIRED>
+		<!ATTLIST MULTI type (commercial|residencial) #REQUIRED>
 
-	<!ELEMENT INFO EMPTY>
-		<!ATTLIST INFO rent CDATA #REQUIRED, period (monthly|yearly) #REQUIRED, renter IDREF #IMPLIED>
+	<!ELEMENT INFO (RESIDENCIAL*)>
+		<!ATTLIST INFO rent CDATA #REQUIRED period (monthly|yearly) #REQUIRED renter IDREF #IMPLIED unitID ID #IMPLIED>
 
 	<!ELEMENT ADDRESS EMPTY>
-		<!ATTLIST ADDRESS unitNum CDATA #IMPLIED streetNum CDATA #REQUIRED, streetName CDATA #REQUIRED, city CDATA #REQUIRED, country CDATA #REQUIRED, postalCode CDATA #REQUIRED>
-]>
+		<!ATTLIST ADDRESS unitNum CDATA #IMPLIED streetNum CDATA #REQUIRED streetName CDATA #REQUIRED city CDATA #REQUIRED country CDATA #REQUIRED postalCode CDATA #REQUIRED>

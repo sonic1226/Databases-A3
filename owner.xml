@@ -1,2 +1,26 @@
 <?xml version="1.0" standalone="no"?>
-<!DOCTYPE Owners SYSTEM "owner.dtd">
+<!DOCTYPE OWNERS SYSTEM "owner.dtd">
+<OWNERS>
+<OWNER type="individual" name="John" id="O001">
+	<INDIVIDUAL>
+		<PHONE country_code="1" area_code="416" local_num="111111"/>
+		<ADDRESS unitNum="1" streetNum="1564" streetName="College" city="Toronto" country="Canada" postalCode="M2T1R3"/>
+	</INDIVIDUAL>
+</OWNER>
+
+<OWNER type="corporation" name="company1" id="O002">
+	<CORPORATION>
+		<PHONEF>
+			<PHONEID title="CEO" name="Mirana">
+				<PHONE country_code="1" area_code="647" local_num="2223456"/>
+			</PHONEID>
+		</PHONEF>
+		<PHONEF>
+			<PHONEID title="Director" name="Albert">
+				<PHONE country_code="1" area_code="647" local_num="9993224"/>
+			</PHONEID>
+		</PHONEF>
+		<ADDRESS unitNum="133" streetNum="29" streetName="Spadina" city="Toronto" country="Canada" postalCode="P2T7Y2"/>
+	</CORPORATION>
+</OWNER>
+</OWNERS>

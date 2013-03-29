@@ -4,11 +4,10 @@
 	- A renter is renting zero or more properties, and the Id of each property they are renting is recorded
 	- A phone number consists of a country code, area code, and a local number.-->
 
-	<!DOCTYPE RENTER[
-		<!ELEMENT RENTER(PROPERTY*,PHONE*)>
-			<!ATTLIST RENTER name CDATA #REQUIRED, id ID #REQUIRED>
+		<!ELEMENT RENTERS (RENTER*)>
+		<!ELEMENT RENTER (PROPERTY*,PHONE*)>
+			<!ATTLIST RENTER name CDATA #REQUIRED id ID #REQUIRED>
 		<!ELEMENT PROPERTY EMPTY>
-			<!ATTLIST PROPERTY id IDREF #REQUIRED>
+			<!ATTLIST PROPERTY id IDREF #REQUIRED unitID xs:IDREF #IMPLIED>
 		<!ELEMENT PHONE EMPTY>
-			<!ATTLIST PHONE type cell|home|work|other #REQUIRED, country_code CDATA #REQUIRED, area_code CDATA #REQUIRED, local_num CDATA #REQUIRED>
-	]>
+			<!ATTLIST PHONE type (cell|home|work|other) #REQUIRED country_code CDATA #REQUIRED area_code CDATA #REQUIRED local_num CDATA #REQUIRED>

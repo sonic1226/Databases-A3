@@ -1,2 +1,16 @@
 <?xml version="1.0" standalone="no"?>
-<!DOCTYPE Renters SYSTEM "renter.dtd">
+<!DOCTYPE RENTERS SYSTEM "renter.dtd">
+<RENTERS>
+	<RENTER name="Sara" id="R001">
+		<PROPERTY id="P001"/>
+		<PROPERTY id="P002"/>
+		<PROPERTY id="P003" unitID="P3U001"/>
+		<PROPERTY id="P004" unitID="P3U001"/>
+		<PHONE type="work" country_code="1" area_code="567" local_num="3334333"/>
+	</RENTER>
+	<RENTER name="Jay" id="R002">
+		<PROPERTY id="P003" unitID="P3U002"/>
+		<PROPERTY id="P004" unitID="P3U002"/>
+		<PHONE type="cell" country_code="1" area_code="416" local_num="1231234"/>
+	</RENTER>
+</RENTERS>
